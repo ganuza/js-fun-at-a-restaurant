@@ -1,7 +1,8 @@
-function nameMenuItem() {
+//function nameMenuItem() {
 
+function nameMenuItem(name) {
+  return `Delicious ${name}`;
 }
-
 
 module.exports = {
   nameMenuItem,
@@ -11,5 +12,3 @@ module.exports = {
   // decreasePrice,
   // createRecipe
 }
-
-
