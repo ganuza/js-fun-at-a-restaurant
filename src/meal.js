@@ -8,7 +8,7 @@ function createMenuItem(menuName, price, type) {
   return {
     'name': nameMenuItem('French Toast'),
     'price': price,
-    'type': 'breakfast'
+    'type': type
   }
 };
 
@@ -25,7 +25,18 @@ function formatPrice(price) {
   return `$${price}`
 }
 
+function decreasePrice (price) {
+  return 0.90 * price
+}
 
+function createRecipe(title, ingredients, type) {
+  return {
+    title: title,
+    ingredients: ingredients,
+    type: type,
+
+  }
+}
 
 
 
@@ -41,5 +52,5 @@ module.exports = {
   addIngredients,
   formatPrice,
   decreasePrice,
-  // createRecipe
+  createRecipe
 }
