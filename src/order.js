@@ -23,9 +23,40 @@ function listItems(ordersList) {
   return list;
 }
 
-function searchOrder() {
+function searchOrder(deliveryOrders, item) {
+  console.log(deliveryOrders);
+  console.log(item);
+  var orderItems = []
+  for (var i = 0; i < deliveryOrders.length; i ++) {
+    orderItems.push(deliveryOrders[i].item);
+  
+  }
+  console.log(orderItems);
+  if (orderItems.includes(item)) {
+    return true
+  } else {
+    return false
+  }
+  
+    //stringItem = String(item)
+    //console.log(deliveryOrders[i].item)
+    //console.log(deliveryOrders[i].includes(stringItem));
+    // if (deliveryOrders.item !== item) {
+    //   var itemsMatch = false
+    // } else {
+    //   var itemsMatch = true
+    // }console.log(deliveryOrders.item, itemsMatch)
+    // return itemsMatch
+}  
+  // for (var i = 0; i < deliveryOrders.length; i ++) {
+  //   console.log(deliveryOrders[i].item);
+  //   if (deliveryOrders[i].item === item) {
+  //     var bool = true;
+  //   } else {
+  //     var bool = false;
+  //   }console.log(bool);
+  // }
 
-};
 module.exports = {
   takeOrder,
   refundOrder,
