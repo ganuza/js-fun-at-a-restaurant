@@ -81,7 +81,22 @@ function removeMenuItem(restaurantName, menuItemName, menuItemType) {
 // }
 
 
-
+function checkForFood(restaurantName, menuItem) {
+  console.log('restaurant: ', restaurantName)
+  console.log('menus: ', restaurantName.menus)
+  console.log('menuItems: ', restaurantName.menus.breakfast)
+  
+  for (var i = 0; i < restaurantName.menus.breakfast.length; i ++) {
+    console.log('Round: ', i)
+    console.log('length: ', restaurantName.menus.breakfast.length)
+    console.log('bfast1:', restaurantName.menus.breakfast[i])
+    console.log('menuItem', menuItem)
+    var checkedMenuItem
+    if (restaurantName.menus.breakfast[i].name === menuItem.name) {
+      
+    } return `Yes, we're serving ${menuItem.name} today!`
+  } return `Sorry, we aren't serving ${menuItem.name} today.`
+ }
 
 
 
@@ -89,5 +104,5 @@ module.exports = {
   createRestaurant, 
   addMenuItem,
   removeMenuItem,
-  // checkForFood
+  checkForFood
 }
